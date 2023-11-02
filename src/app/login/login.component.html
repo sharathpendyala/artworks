@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center shadow-lg" style="height: 100vh;">
+    <form class="shadow-lg p-5 " [formGroup] = 'reactiveForm'>
+        <div class="form-group" >
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  formControlName = 'email' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted" >We'll never share your email with anyone</small>
+        </div>
+        <div class="form-group mt-2">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"   formControlName = 'password' placeholder="Password">
+        </div>
+        <div class="form-check mt-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label " for="exampleCheck1" >Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary  mt-2" (click)="handleUserDetails()" >Login</button>
+        <div class="mt-2 ms-5">
+           <span class="ms-5"> New User? </span> <button class="btn btn-primary" [routerLink]="routervar">Sign In</button>
+        </div>
+      </form>
+</div>

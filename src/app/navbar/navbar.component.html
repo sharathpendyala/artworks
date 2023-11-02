@@ -1,0 +1,14 @@
+<div class="container-fluid p-2 bg-secondary text-white">
+  <!-- <mat-icon>home</mat-icon> -->
+  <img src="https://api.artic.edu/docs/assets/logo.svg" height="40px"  alt="">
+  <a cls routerLink="" class="ms-2">Arts institue of Chicago</a>
+  <div id="search">
+    <form action="" [formGroup]="reactiveForm" class="d-flex">
+
+      <button routerLink="wishlist" class="ms-2 btn btn-dark" (click)="addToWishlist()">Wishlist</button>
+      <a cls routerLink="explore"  class="ms-2 btn btn-dark" >Explore</a>
+        <input class="form-control mr-sm-2 ms-2" type="search" placeholder="Search" aria-label="Search" formControlName = "searchValue">
+      <!-- <button class="ms-2 btn btn-primary">Search</button> -->
+    </form>
+  </div>
+</div>

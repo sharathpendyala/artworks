@@ -1,0 +1,37 @@
+<div *ngFor="let wish of wishList" class="m-3 border border-success">
+  <div class="d-flex p-3  shadow-lg">
+    <img
+      src="https://www.artic.edu/iiif/2/{{
+        wish.image_id
+      }}/full/843,/0/default.jpg"
+      alt="Card image cap"
+      height="250px"
+      width="300px"
+    />
+    <div class="ms-3">
+      <h2 class="ms-2">
+        <b>{{ wish.title }}</b>
+      </h2>
+      <div class="ms-3">
+        <p *ngIf="wish.description === null">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dicta
+          iste illum facere, atque officia nihil, est qui rem obcaecati minus
+          modi quos voluptatibus velit molestias saepe doloremque praesentium
+          cum illo ullam deleniti, accusantium quas vel. Quas ea dolorum beatae
+          quos perferendis quibusdam voluptas, voluptates placeat impedit,
+          aperiam debitis. Id, non. Provident vel deleniti minus est neque quod
+          itaque sed ducimus laudantium aut. Velit culpa commodi aut. Nisi eius
+          odit totam asperiores excepturi. Asperiores animi quam eum corporis
+          debitis sit sed nam exercitationem pariatur, cumque, ut dignissimos
+          labore impedit ex facilis quibusdam qui culpa excepturi quia
+          consequatur. Ipsa, placeat fugit!
+        </p>
+        <p>{{ wish.description | slice : 0 : 800 }}</p>
+      </div>
+      <div class="mt-4 d-flex justify-content-center">
+        <button mat-raised-button color="warn" (click)="removeFavorite(wish.id)">Remove From Wishlist</button>
+      </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="row m-5 bg-secondary text-dark">
+  <div class="col-lg-4">
+    <img
+      class="card-img-top p-2"
+      src="https://www.artic.edu/iiif/2/{{
+        artsList.image_id
+      }}/full/843,/0/default.jpg"
+      alt="Card image cap"
+      height="450px"
+    />
+  </div>
+  <div class="col-lg-8">
+    <div class="m-3 d-flex justify-content-center">
+      <h2>{{ artsList.title }}</h2>
+    </div>
+    <div class="ms-3">
+      <p *ngIf="artsList.description == null ||  artsList.description.length < 200">
+        {{artsList.description}}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id
+        maxime nobis, minima autem facere fugiat totam ipsam. Exercitationem
+        aliquam nostrum ipsum libero quas, animi et suscipit deleniti repellat
+        corporis, doloribus mollitia similique, quasi numquam distinctio
+        repellendus ad soluta. Voluptatum sed labore culpa temporibus tempore
+        hic nostrum fugiat minima, facilis reprehenderit animi doloremque odit
+        est vero ducimus veniam laborum voluptatibus autem, aut dolores iste
+        enim eum itaque pariatur. Nesciunt adipisci aliquid enim rerum
+        consequuntur esse omnis voluptatibus necessitatibus, ducimus,
+        repellendus, perspiciatis rem mollitia provident sint excepturi error
+        fuga tempora. Laborum maxime distinctio iusto obcaecati quos labore,
+        officia soluta. Quod nobis hic officia, obcaecati saepe porro dolore
+        deleniti consequatur impedit in error earum aspernatur blanditiis cum
+        labore. Numquam id doloremque modi sequi consectetur. Blanditiis
+        temporibus asperiores cupiditate non nulla, sit saepe harum nesciunt ad
+        quam praesentium rem accusamus earum vel ratione molestias est adipisci
+        deserunt aut doloribus? Vel, illum quis ad atque corporis officiis,
+        dolorum accusamus libero deleniti doloremque distinctio beatae fugiat
+        sit expedita? Possimus fuga nulla doloremque inventore neque velit
+        suscipit totam animi illum est debitis repellat, cupiditate dignissimos
+        at ad incidunt nisi. Officiis praesentium nihil repellendus saepe
+        aliquam unde exercitationem fugiat illum dolores dolorem? Commodi
+        deserunt architecto eligendi deleniti!
+      </p>
+      <p>{{ artsList.description | slice : 0 : 300 }}</p>
+    </div>
+    <div class="mt-3 d-flex justify-content-center">
+        <button mat-raised-button color="primary" routerLink="redirect">Go Back</button>
+    </div>
+  </div>
+</div>
